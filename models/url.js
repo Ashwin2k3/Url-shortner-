@@ -1,8 +1,10 @@
-const mongoose = require("mongoose");
-        async function generateShortId() {
-            const { nanoid } = await import('nanoid');
-            return nanoid(7);
-        }
+const mongoose = require('mongoose');
+// const shortId = require('shortId');
+
+async function generateShortId() {
+    const { nanoid } = await import('nanoid');
+    return nanoid(7);
+}
 
 const urlSchema = new mongoose.Schema({
     originalUrl: { type: String, required: true },
@@ -20,4 +22,4 @@ urlSchema.pre('save', function (next) {
     else next();
 });
 
-module.exports = mongoose.model('Url', urlSchema); 
+module.exports = mongoose.model('Url', urlSchema);

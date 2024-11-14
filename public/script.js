@@ -23,6 +23,6 @@ function displayUrl(shortUrl, originalUrl) {
     urlList.appendChild(listItem);
 }
 
-function getAllUrls() {
-
+function getAllUrls(){
+    
 }
